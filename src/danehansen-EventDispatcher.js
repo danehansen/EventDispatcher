@@ -1,4 +1,4 @@
 import EventDispatcher from './index'
-import { putClassOnWindow } from '@danehansen/package-helpers'
+import * as packageHelpers from '@danehansen/package-helpers'
 
-putClassOnWindow(EventDispatcher, 'EventDispatcher')
+packageHelpers.putClassOnWindow(EventDispatcher, 'EventDispatcher')

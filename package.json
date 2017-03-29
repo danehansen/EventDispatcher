@@ -1,6 +1,6 @@
 {
   "name": "@danehansen/event-dispatcher",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "description": "event dispatcher",
   "main": "index.js",
   "scripts": {

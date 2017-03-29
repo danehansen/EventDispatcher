@@ -1,4 +1,4 @@
-#EventDispatcher
+# EventDispatcher
 
 __Class__ : public class [EventDispatcher](https://github.com/danehansen/EventDispatcher)  
 __Inheritance__ : [EventDispatcher](https://github.com/danehansen/EventDispatcher) > Object  
@@ -6,11 +6,11 @@ __Subclasses__ : [Preloader](https://github.com/danehansen/Preloader), [Sprite](
 
 The EventDispatcher class is the base class for all classes that dispatch events. It is totally ripped off from the AS3 EventDispatcher, but simplified. EventDispatcher can also be used without creating an instance like singleton emitter.
 
-##Installation
+## Installation
 
 `npm install --save @danehansen/event-dispatcher`
 
-##Usage
+## Usage
 
 As a module:
 
@@ -23,7 +23,7 @@ In your browser:
       var EventDispatcher = window.danehansen.EventDispatcher;
     </script>
 
-##Public Static Methods
+## Public Static Methods
 
 * __addEventListener__(type:String, listener:Function)  
 [static] Registers an event listener object with EventDispatcher so that it will dispatch notification of an event.
@@ -32,7 +32,7 @@ In your browser:
 * __removeEventListener__ (type:String, listener:Function)  
 [static] Removes a listener from EventDispatcher.
 
-##Public Methods
+## Public Methods
 
 * __EventDispatcher__(target:Object)  
 Aggregates an instance of the EventDispatcher class.
