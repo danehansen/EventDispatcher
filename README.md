@@ -38,6 +38,8 @@ In your browser:
 Aggregates an instance of the EventDispatcher class.
 * __addEventListener__(type:String, listener:Function)  
 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.
+* __clearEventListeners__()  
+Clears all event listeners of the instance.
 * __dispatchEvent__(type:String)  
 Dispatches an event into the event flow.
 * __removeEventListener__ (type:String, listener:Function)  
