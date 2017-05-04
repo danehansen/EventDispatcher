@@ -21,7 +21,7 @@ function removeEventListener(callbackHolder, type, listener) {
   }
 }
 
-export default class EventDispatcher {
+class EventDispatcher {
   static addEventListener(type, listener) {
     addEventListener(CALLBACKS, type, listener)
   }
@@ -66,3 +66,5 @@ export default class EventDispatcher {
     }
   }
 }
+
+module.exports = EventDispatcher

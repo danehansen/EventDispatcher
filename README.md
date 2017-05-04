@@ -15,12 +15,26 @@ The EventDispatcher class is the base class for all classes that dispatch events
 As a module:
 
     import EventDispatcher from '@danehansen/event-dispatcher';
+    var eventDispatcher = new EventDispatcher();
+    eventDispatcher.addEventListener('event', onEvent);
+    eventDispatcher.dispatchEvent('event');
+
+    function onEvent(evt) {
+      console.log('hi!');
+    }
 
 In your browser:
 
     <script src='danehansen-EventDispatcher.min.js'></script>
     <script>
       var EventDispatcher = window.danehansen.EventDispatcher;
+      var eventDispatcher = new EventDispatcher();
+      eventDispatcher.addEventListener('event', onEvent);
+      eventDispatcher.dispatchEvent('event');
+
+      function onEvent(evt) {
+        console.log('hi!');
+      }
     </script>
 
 ## Public Static Methods

@@ -23,6 +23,13 @@
 <p>As a module:</p>
 
 <pre><code>import EventDispatcher from '@danehansen/event-dispatcher';
+var eventDispatcher = new EventDispatcher();
+eventDispatcher.addEventListener('event', onEvent);
+eventDispatcher.dispatchEvent('event');
+
+function onEvent(evt) {
+  console.log('hi!');
+}
 </code></pre>
 
 <p>In your browser:</p>
@@ -30,6 +37,13 @@
 <pre><code>&lt;script src='danehansen-EventDispatcher.min.js'&gt;&lt;/script&gt;
 &lt;script&gt;
   var EventDispatcher = window.danehansen.EventDispatcher;
+  var eventDispatcher = new EventDispatcher();
+  eventDispatcher.addEventListener('event', onEvent);
+  eventDispatcher.dispatchEvent('event');
+
+  function onEvent(evt) {
+    console.log('hi!');
+  }
 &lt;/script&gt;
 </code></pre>
 
