@@ -4,20 +4,19 @@
   "description": "event dispatcher",
   "main": "danehansen-EventDispatcher.min.js",
   "scripts": {
-    "max": "webpack",
+    "max": "webpack --mode=development",
     "test": "mocha --require babel-register",
     "test-watch": "mocha --require babel-register -w",
     "coverage": "nyc mocha  --require babel-register",
     "coverage-report": "nyc --reporter=html mocha  --require babel-register",
-    "git": "git add -A && git commit -m 'squish me' & git push -f origin master",
-    "min": "webpack -p",
-    "pub": "npm run test && npm run min && sleep 1 && npm run git && npm publish --access public",
+    "git":
+      "git add -A && git commit -m 'squish me' & git push -f origin master",
+    "min": "webpack -p --mode=production",
+    "pub":
+      "npm run test && npm run min && sleep 1 && npm run git && npm publish --access public",
     "prepublish": "npm run max"
   },
-  "keywords": [
-    "events",
-    "event dispatcher"
-  ],
+  "keywords": ["events", "event dispatcher"],
   "author": "Dane Hansen <dane@danehansen.com> (http://www.danehansen.com/)",
   "license": "MIT",
   "devDependencies": {
@@ -29,7 +28,8 @@
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "sinon": "^6.1.5",
-    "webpack": "^2.5.0"
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   },
   "repository": {
     "type": "git",
