@@ -1,27 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <title>EventDispatcher</title>
-    <link href='https://danehansen.github.io/package-helpers/styles.css' rel='stylesheet' />
+    <meta charset="utf-8" />
+    <title>event dispatcher</title>
+    <style>
+      body {
+  background-color: #fff;
+  color: #000;
+  font-family: Helvetica, Arial;
+  font-size: 12px;
+  padding: 50px;
+}
+
+body > div {
+  margin-top: 30px;
+  padding: 20px 0;
+  width: 600px;
+}
+
+body > div,
+footer {
+  border-top: 1px solid #000;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+    </style>
   </head>
   <body>
-<h1>EventDispatcher</h1>
-
-<p><strong>Class</strong> : public class <a href="https://github.com/danehansen/EventDispatcher">EventDispatcher</a> <br />
-<strong>Inheritance</strong> : <a href="https://github.com/danehansen/EventDispatcher">EventDispatcher</a> > Object <br />
+    <h1>EventDispatcher <img src="https://img.shields.io/bundlephobia/minzip/@danehansen/event-dispatcher.svg" alt="npm bundle size (scoped)" /> <img src="https://img.shields.io/npm/dt/@danehansen/event-dispatcher.svg" alt="npm" /></h1>
+<p><strong>Class</strong> : public class <a href="https://github.com/danehansen/EventDispatcher">EventDispatcher</a><br />
+<strong>Inheritance</strong> : <a href="https://github.com/danehansen/EventDispatcher">EventDispatcher</a> &gt; Object<br />
 <strong>Subclasses</strong> : <a href="https://github.com/danehansen/Preloader">Preloader</a>, <a href="https://github.com/danehansen/Sprite">Sprite</a>, <a href="https://github.com/danehansen/Timer">Timer</a></p>
-
 <p>The EventDispatcher class is the base class for all classes that dispatch events. It is totally ripped off from the AS3 EventDispatcher, but simplified. EventDispatcher can also be used without creating an instance like singleton emitter.</p>
-
 <h2>Installation</h2>
-
 <p><code>npm install --save @danehansen/event-dispatcher</code></p>
-
 <h2>Usage</h2>
-
 <p>As a module:</p>
-
 <pre><code>import EventDispatcher from '@danehansen/event-dispatcher';
 var eventDispatcher = new EventDispatcher();
 eventDispatcher.addEventListener('event', onEvent);
@@ -31,9 +48,7 @@ function onEvent(evt) {
   console.log('hi!');
 }
 </code></pre>
-
 <p>In your browser:</p>
-
 <pre><code>&lt;script src='danehansen-EventDispatcher.min.js'&gt;&lt;/script&gt;
 &lt;script&gt;
   var EventDispatcher = window.danehansen.EventDispatcher;
@@ -46,31 +61,28 @@ function onEvent(evt) {
   }
 &lt;/script&gt;
 </code></pre>
-
 <h2>Public Static Methods</h2>
-
 <ul>
-<li><strong>addEventListener</strong>(type:String, listener:Function) <br />
+<li><strong>addEventListener</strong>(type:String, listener:Function)<br />
 [static] Registers an event listener object with EventDispatcher so that it will dispatch notification of an event.</li>
-<li><strong>dispatchEvent</strong>(type:String, ...args:*) <br />
+<li><strong>dispatchEvent</strong>(type:String, …args:*)<br />
 [static] Emits an event, and passes along any extra arguments to the registered listeners.</li>
-<li><strong>removeEventListener</strong> (type:String, listener:Function) <br />
+<li><strong>removeEventListener</strong> (type:String, listener:Function)<br />
 [static] Removes a listener from EventDispatcher.</li>
 </ul>
-
 <h2>Public Methods</h2>
-
 <ul>
-<li><strong>EventDispatcher</strong>(target:Object) <br />
+<li><strong>EventDispatcher</strong>(target:Object)<br />
 Aggregates an instance of the EventDispatcher class.</li>
-<li><strong>addEventListener</strong>(type:String, listener:Function) <br />
+<li><strong>addEventListener</strong>(type:String, listener:Function)<br />
 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.</li>
-<li><strong>clearEventListeners</strong>() <br />
+<li><strong>clearEventListeners</strong>()<br />
 Clears all event listeners of the instance.</li>
-<li><strong>dispatchEvent</strong>(type:String) <br />
+<li><strong>dispatchEvent</strong>(type:String)<br />
 Dispatches an event into the event flow.</li>
-<li><strong>removeEventListener</strong> (type:String, listener:Function) <br />
+<li><strong>removeEventListener</strong> (type:String, listener:Function)<br />
 Removes a listener from the EventDispatcher object.</li>
 </ul>
+    <script></script>
   </body>
 </html>

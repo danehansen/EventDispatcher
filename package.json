@@ -1,25 +1,28 @@
 {
   "name": "@danehansen/event-dispatcher",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "event dispatcher",
   "main": "danehansen-EventDispatcher.min.js",
   "scripts": {
+    "buildindex": "package-helpers-buildindex srcHtml=./src/index.html srcReadme=./README.md dest=./index.html",
     "max": "webpack --mode=development",
     "test": "mocha --require babel-register",
     "test-watch": "mocha --require babel-register -w",
     "coverage": "nyc mocha  --require babel-register",
     "coverage-report": "nyc --reporter=html mocha  --require babel-register",
-    "git":
-      "git add -A && git commit -m 'squish me' & git push -f origin master",
     "min": "webpack -p --mode=production",
-    "pub":
-      "npm run test && npm run min && sleep 1 && npm run git && npm publish --access public",
-    "prepublish": "npm run max"
+    "pub": "npm publish --access public",
+    "prepublish": "npm run min && npm run test && npm run max && npm run buildindex"
   },
-  "keywords": ["events", "event dispatcher"],
+  "keywords": [
+    "events",
+    "event dispatcher"
+  ],
   "author": "Dane Hansen <dane@danehansen.com> (http://www.danehansen.com/)",
   "license": "MIT",
   "devDependencies": {
+    "@danehansen/package-helpers": "^0.2.0",
+    "acorn": "^6.1.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
