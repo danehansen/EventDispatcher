@@ -1,6 +1,6 @@
 {
   "name": "@danehansen/event-dispatcher",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "event dispatcher",
   "main": "danehansen-EventDispatcher.min.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "author": "Dane Hansen <dane@danehansen.com> (http://www.danehansen.com/)",
   "license": "MIT",
   "devDependencies": {
-    "@danehansen/package-helpers": "^0.2.0",
+    "@danehansen/package-helpers": "^0.2.1",
     "acorn": "^6.1.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
