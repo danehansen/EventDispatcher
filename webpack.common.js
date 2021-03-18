@@ -21,6 +21,6 @@ module.exports = {
     filename: "danehansen-EventDispatcher.min.js",
     library: ["danehansen", "EventDispatcher"],
     libraryTarget: "umd",
-    path: path.resolve(__dirname)
+    path: __dirname,
   }
 };
